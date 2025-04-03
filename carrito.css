@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "poppins", sans-serif;
+    overflow-x: hidden;
+    }
+
+
+/* Estilo para el contenedor del carrito */
+#carrito {
+    margin-top: 20px;
+}
+
+/* Estilo para la tabla del carrito */
+.table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilo para las imágenes del producto */
+.table img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para el botón de vaciar carrito */
+#vaciar-carrito {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el mensaje de confirmación */
+#mensaje-confirmacion {
+    width: auto;
+}
+
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar el tamaño de la imagen en la tabla */
+    .table img {
+        width: 50px; /* Cambiar el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    /* Ajustar el tamaño de la tabla */
+    .table {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Ajustar el botón de vaciar carrito */
+    #vaciar-carrito {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    /* Ajustar el tamaño de la tabla */
+    .table {
+        font-size: 12px; /* Reducir aún más el tamaño de la fuente */
+    }
+
+    /* Ajustar el tamaño de la imagen en la tabla */
+    .table img {
+        width: 40px; /* Cambiar el tamaño de la imagen en pantallas muy pequeñas */
+    }
+}

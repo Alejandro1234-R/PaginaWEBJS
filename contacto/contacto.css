@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Sección de contacto */
+.contact-section {
+    max-width: 1200px;
+    background: linear-gradient(145deg, #ffffff, #e6e8ec);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-section h2:after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #ff6b6b;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+/* Estilo de tarjetas de contacto */
+.contact-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 30px;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #ff6b6b, #ffc107);
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform: scale(0);
+    z-index: 0;
+}
+
+.contact-card:hover::before {
+    transform: scale(1);
+}
+
+.contact-card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card p, .contact-card a {
+    color: #555;
+    margin: 5px 0;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #ffc107;
+}
+
+.contact-card img {
+    width: 50px;
+    margin-bottom: 15px;
+    z-index: 1;
+    position: relative;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact-card {
+        width: 100%;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+}
